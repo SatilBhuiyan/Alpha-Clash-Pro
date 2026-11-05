@@ -18,7 +18,7 @@
     >
       <!-- home screen -->
       <section
-        class="home min-h-screen text-white flex flex-col justify-center items-center hidden"
+        class="home min-h-screen text-white flex flex-col justify-center items-center"
       >
         <div class="text-center">
           <h1 class="text-8xl font-anton">ALPHABET CLASH</h1>
@@ -32,8 +32,11 @@
           </button>
         </div>
       </section>
+
+
       <!-- play ground -->
-      <section class="play-ground">
+       
+      <section class="play-ground hidden">
         <div class="flex flex-col items-center gap-20 pt-10">
           <!-- screen -->
           <div
@@ -103,7 +106,18 @@
           </div>
         </div>
       </section>
-      <section class="score"></section>
+
+      <!-- score -->
+
+      <section class="score text-white flex justify-center items-center min-h-screen hidden">
+        <div class="text-center space-y-5 bg-[#FFFFFF33] p-7 rounded-lg">
+          <h1 class="text-6xl">
+            <span class="font-extrabold">Score :</span> 14
+          </h1>
+          <button class="btn text-[#010313] font-semibold text-xl p-7">Play Now</button>
+          <p>Practice will make you Pro</p>
+        </div>
+      </section>
     </main>
   </body>
 </html>
