@@ -1,8 +1,19 @@
-function playnow(){
-    hideelementbyid('home-screen');
-    showelementbyid('play-screen');
-    continueGame();
+function handlekeyboardkeyupEvent(event){
+    const playerpress = event.key;
+    
+    const currentalphaelement =document.getElementById('current-alphabet');
+    const currentalphabet =currentalphaelement.innerText;
+    const alphabet = currentalphabet.toLowerCase();
+
+    if(playerpress === alphabet){
+        console.log("Get a point");
+    }
+    else{
+        console.log("loss a point");
+    }
 }
+
+document.addEventListener('keyup', handlekeyboardkeyupEvent);
 
 function continueGame()
 {
@@ -13,4 +24,10 @@ function continueGame()
 
     addbuttoncolor(alphabet);
 
+}
+
+function playnow(){
+    hideelementbyid('home-screen');
+    showelementbyid('play-screen');
+    continueGame();
 }
