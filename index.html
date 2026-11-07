@@ -13,11 +13,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="font-poppins">
-    <main
-      class="min-h-screen bg-[#1E1E1E] bg-[url(images/background.png)] bg-no-repeat bg-center"
-    >
+    <main class="min-h-screen bg-[#1E1E1E] bg-[url(images/background.png)] bg-no-repeat bg-center">
+
       <!-- home screen -->
-      <section
+
+      <section id="home-screen"
         class="home min-h-screen text-white flex flex-col justify-center items-center"
       >
         <div class="text-center">
@@ -25,18 +25,15 @@
           <p class="my-8">
             Unleash Your Keyboard Kung Fu : Press “Enter” to Play
           </p>
-          <button
-            class="w-44 h-16 bg-white text-black font-semibold text-2xl rounded-sm"
-          >
+          <button onclick="playnow()" class="w-44 h-16 bg-white text-black font-semibold text-2xl rounded-sm">
             Play Now
           </button>
         </div>
       </section>
 
-
       <!-- play ground -->
-       
-      <section class="play-ground hidden">
+
+      <section id="play-screen" class="play-ground hidden">
         <div class="flex flex-col items-center gap-20 pt-10">
           <!-- screen -->
           <div
@@ -48,43 +45,43 @@
                 </p>
               </div>
               <div class="h-full flex justify-center items-center">
-                <p class="text-black text-9xl font-bold">Y</p>
+                <p id="current-alphabet" class="text-black text-9xl font-bold uppercase">Y</p>
               </div>
           </div>
           <!-- keyboard -->
           <div class="w-[685px] h-[185px]">
             <div class="my-1 flex w-full justify-center gap-1">
-              <kbd class="kbd w-[60px] h-[60px] text-xl">q</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">w</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">e</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">r</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">t</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">y</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">u</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">i</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">o</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">p</kbd>
+              <kbd id="q" class="kbd w-[60px] h-[60px] text-xl">q</kbd>
+              <kbd id="w" class="kbd w-[60px] h-[60px] text-xl">w</kbd>
+              <kbd id="e" class="kbd w-[60px] h-[60px] text-xl">e</kbd>
+              <kbd id="r" class="kbd w-[60px] h-[60px] text-xl">r</kbd>
+              <kbd id="t" class="kbd w-[60px] h-[60px] text-xl">t</kbd>
+              <kbd id="y" class="kbd w-[60px] h-[60px] text-xl">y</kbd>
+              <kbd id="u" class="kbd w-[60px] h-[60px] text-xl">u</kbd>
+              <kbd id="i" class="kbd w-[60px] h-[60px] text-xl">i</kbd>
+              <kbd id="o" class="kbd w-[60px] h-[60px] text-xl">o</kbd>
+              <kbd id="p" class="kbd w-[60px] h-[60px] text-xl">p</kbd>
             </div>
             <div class="my-1 flex w-full justify-center gap-1">
-              <kbd class="kbd w-[60px] h-[60px] text-xl">a</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">s</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">d</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">f</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">g</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">h</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">j</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">k</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">l</kbd>
+              <kbd id="a" class="kbd w-[60px] h-[60px] text-xl">a</kbd>
+              <kbd id="s" class="kbd w-[60px] h-[60px] text-xl">s</kbd>
+              <kbd id="d" class="kbd w-[60px] h-[60px] text-xl">d</kbd>
+              <kbd id="f" class="kbd w-[60px] h-[60px] text-xl">f</kbd>
+              <kbd id="g" class="kbd w-[60px] h-[60px] text-xl">g</kbd>
+              <kbd id="h" class="kbd w-[60px] h-[60px] text-xl">h</kbd>
+              <kbd id="j" class="kbd w-[60px] h-[60px] text-xl">j</kbd>
+              <kbd id="k" class="kbd w-[60px] h-[60px] text-xl">k</kbd>
+              <kbd id="l" class="kbd w-[60px] h-[60px] text-xl">l</kbd>
             </div>
             <div class="my-1 flex w-full justify-center gap-1">
-              <kbd class="kbd w-[60px] h-[60px] text-xl">z</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">x</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">c</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">v</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">b</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">n</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">m</kbd>
-              <kbd class="kbd w-[60px] h-[60px] text-xl">/</kbd>
+              <kbd id="z" class="kbd w-[60px] h-[60px] text-xl">z</kbd>
+              <kbd id="x" class="kbd w-[60px] h-[60px] text-xl">x</kbd>
+              <kbd id="c" class="kbd w-[60px] h-[60px] text-xl">c</kbd>
+              <kbd id="v" class="kbd w-[60px] h-[60px] text-xl">v</kbd>
+              <kbd id="b" class="kbd w-[60px] h-[60px] text-xl">b</kbd>
+              <kbd id="n" class="kbd w-[60px] h-[60px] text-xl">n</kbd>
+              <kbd id="m" class="kbd w-[60px] h-[60px] text-xl">m</kbd>
+              <kbd id="/" class="kbd w-[60px] h-[60px] text-xl">/</kbd>
             </div>
           </div>
           <!-- life score -->
@@ -119,5 +116,8 @@
         </div>
       </section>
     </main>
+
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
