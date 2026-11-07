@@ -43,16 +43,7 @@ function lifescore(elementid){
     return currentlifescore;
 }
 
-function scoreupdate(score){
-    const newscore =score+1;
-
-    const currentscoreelement = document.getElementById('current-score');
-    currentscoreelement.innerText = newscore;
-}
-
-function lifeupdate(score){
-    const newslife =score-1;
-
-    const currentlifeelement = document.getElementById('current-life');
-    currentlifeelement.innerText = newslife;
+function lifescoreupdate(elementid,score){
+    const currentlifescoreelement = document.getElementById(elementid);
+    currentlifescoreelement.innerText = score;
 }

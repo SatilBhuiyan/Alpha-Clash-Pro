@@ -8,14 +8,20 @@ function handlekeyboardkeyupEvent(event){
     if(playerpress === alphabet){
         console.log("Get a point");
         const score = lifescore('current-score');
-        scoreupdate(score);
+        const updatescore=score+1;
+        lifescoreupdate('current-score',updatescore);
         removebuttoncolor(alphabet);
         continueGame();
     }
     else{
         console.log("loss a point");
         const life = lifescore('current-life');
-        lifeupdate(life);
+        const updatelife = life-1;
+        lifescoreupdate('current-life', updatelife);
+        if(updatelife === 0)
+        {
+            gameover();
+        }
     }
 }
 
@@ -34,6 +40,17 @@ function continueGame()
 
 function playnow(){
     hideelementbyid('home-screen');
+    hideelementbyid('play-screen');
     showelementbyid('play-screen');
+
+    lifescoreupdate('current-life', 5);
+    lifescoreupdate('current-score', 0);
+
     continueGame();
+}
+
+function gameover()
+{
+    hideelementbyid('play-screen');
+    showelementbyid('final-score');
 }
