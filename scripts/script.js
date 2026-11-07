@@ -7,11 +7,15 @@ function handlekeyboardkeyupEvent(event){
 
     if(playerpress === alphabet){
         console.log("Get a point");
+        const score = lifescore('current-score');
+        scoreupdate(score);
         removebuttoncolor(alphabet);
         continueGame();
     }
     else{
         console.log("loss a point");
+        const life = lifescore('current-life');
+        lifeupdate(life);
     }
 }
 

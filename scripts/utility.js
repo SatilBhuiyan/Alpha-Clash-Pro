@@ -34,3 +34,25 @@ function getAlphabetRandomly()
     const alphabet = alphabets[index];
     return alphabet;
 }
+
+function lifescore(elementid){
+    const currentlifescoreelement = document.getElementById(elementid);
+    const currentlifescoretext = currentlifescoreelement.innerText;
+    const currentlifescore = parseInt(currentlifescoretext);
+
+    return currentlifescore;
+}
+
+function scoreupdate(score){
+    const newscore =score+1;
+
+    const currentscoreelement = document.getElementById('current-score');
+    currentscoreelement.innerText = newscore;
+}
+
+function lifeupdate(score){
+    const newslife =score-1;
+
+    const currentlifeelement = document.getElementById('current-life');
+    currentlifeelement.innerText = newslife;
+}
