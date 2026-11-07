@@ -7,6 +7,8 @@ function handlekeyboardkeyupEvent(event){
 
     if(playerpress === alphabet){
         console.log("Get a point");
+        removebuttoncolor(alphabet);
+        continueGame();
     }
     else{
         console.log("loss a point");
