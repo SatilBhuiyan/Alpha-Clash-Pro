@@ -23,6 +23,12 @@ function removebuttoncolor(elementid)
     element.classList.remove('bg-orange-400');
 }
 
+function gettextelementbyid(elementid){
+    const currentalphabet = document.getElementById(elementid);
+    const text = currentalphabet.innerText;
+    return text;
+}
+
 function getAlphabetRandomly()
 {
     const alphabetstring ='abcdefghijklmnopqrstuvwxyz';

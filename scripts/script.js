@@ -5,6 +5,10 @@ function handlekeyboardkeyupEvent(event){
     const currentalphabet =currentalphaelement.innerText;
     const alphabet = currentalphabet.toLowerCase();
 
+    if(playerpress =="Escape"){
+        gameover();
+    }
+
     if(playerpress === alphabet){
         console.log("Get a point");
         const score = lifescore('current-score');
@@ -40,7 +44,7 @@ function continueGame()
 
 function playnow(){
     hideelementbyid('home-screen');
-    hideelementbyid('play-screen');
+    hideelementbyid('final-score');
     showelementbyid('play-screen');
 
     lifescoreupdate('current-life', 5);
@@ -53,4 +57,10 @@ function gameover()
 {
     hideelementbyid('play-screen');
     showelementbyid('final-score');
+
+    const lastscore = lifescore('current-score');
+    lifescoreupdate('game-score',lastscore);
+
+    const alphabet=gettextelementbyid('current-alphabet')
+    removebuttoncolor(alphabet);
 }
